@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#0a0a0f"/>
+  <!-- Subtle glow -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="180" height="180" rx="40" fill="url(#glow)"/>
+  <!-- Aurebesh A — scaled up -->
+  <line x1="55" y1="38" x2="55" y2="142" stroke="#c9a84c" stroke-width="14" stroke-linecap="round"/>
+  <line x1="125" y1="38" x2="125" y2="142" stroke="#c9a84c" stroke-width="14" stroke-linecap="round"/>
+  <line x1="55" y1="38" x2="125" y2="38" stroke="#c9a84c" stroke-width="14" stroke-linecap="round"/>
+  <line x1="55" y1="90" x2="125" y2="90" stroke="#c9a84c" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="90" cy="142" r="9" fill="#c9a84c"/>
+</svg>

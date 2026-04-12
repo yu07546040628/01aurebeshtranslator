@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="8" fill="#0a0a0f"/>
+  <!-- Aurebesh A glyph (𐤀) rendered as geometric paths -->
+  <!-- Vertical left stroke -->
+  <line x1="10" y1="7" x2="10" y2="25" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Vertical right stroke -->
+  <line x1="22" y1="7" x2="22" y2="25" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Top horizontal -->
+  <line x1="10" y1="7" x2="22" y2="7" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Mid horizontal -->
+  <line x1="10" y1="16" x2="22" y2="16" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bottom dot (Aurebesh A characteristic) -->
+  <circle cx="16" cy="25" r="1.5" fill="#c9a84c"/>
+</svg>

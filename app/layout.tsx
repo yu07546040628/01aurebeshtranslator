@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Aurebesh Translator' }],
   creator: 'Aurebesh Translator',
   publisher: 'Aurebesh Translator',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/apple-icon.svg',
+  },
   robots: {
     index: true,
     follow: true,
