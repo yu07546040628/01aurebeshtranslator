@@ -8,12 +8,36 @@ export default function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [light, setLight] = useState(false);
 
+  /* 初始化：读取本地存储的主题 */
+  useEffect(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') {
+      document.documentElement.classList.add('light');
+      setLight(true);
+    }
+  }, []);
+
+  /* 滚动监听 */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  /* 切换亮暗模式 */
+  const toggleTheme = () => {
+    const next = !light;
+    setLight(next);
+    if (next) {
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
 
   const isActive = (href: string) => pathname === href;
 
@@ -35,6 +59,16 @@ export default function Nav() {
           <li><Link href="/deathtrooper" className={`nav__link nav__link--death${isActive('/deathtrooper') ? ' nav__link--active' : ''}`}>Death Trooper</Link></li>
           <li><Link href="/alphabet"   className={`nav__link nav__link--chart${isActive('/alphabet') ? ' nav__link--active' : ''}`}>Alphabet Chart</Link></li>
         </ul>
+
+        {/* 亮暗切换按钮 */}
+        <button
+          onClick={toggleTheme}
+          aria-label={light ? 'Switch to dark mode' : 'Switch to light mode'}
+          className="nav__theme-btn"
+          title={light ? 'Dark mode' : 'Light mode'}
+        >
+          {light ? '🌙' : '☀️'}
+        </button>
 
         <button
           className={`nav__menu-btn${menuOpen ? ' nav__menu-btn--open' : ''}`}

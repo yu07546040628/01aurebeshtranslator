@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import Nav from '../components/Nav';
+import Comments from '../components/Comments';
 import { tokeniseEnglish, ENG_TO_AUR, aurToEng, DIPTHONGS } from '@/lib/aurebesh';
 
 /* ── Aurebesh letter names ── */
@@ -449,6 +450,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── COMMENTS ── */}
+        <Comments />
 
       </main>
 

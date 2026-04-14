@@ -58,6 +58,197 @@
   --mono: 'Cascadia Code', 'Consolas', monospace;
 }
 
+/* ═══════════════════════════════════════════════════════
+   LIGHT MODE overrides
+   ═══════════════════════════════════════════════════════ */
+html.light {
+  --bg:           #f4f6fc;
+  --bg-2:         #eaeef8;
+  --bg-3:         #dde3f0;
+  --surface:      #ffffff;
+  --surface-2:    #f0f3fa;
+  --border:       rgba(0,0,0,0.09);
+  --border-2:     rgba(0,0,0,0.16);
+
+  --gold:         #8a6a1a;
+  --gold-light:   #6b5014;
+  --gold-dim:     rgba(138,106,26,0.25);
+  --gold-glow:    rgba(138,106,26,0.10);
+
+  --blue:         #2563b0;
+  --blue-light:   #1a4f9a;
+  --blue-glow:    rgba(37,99,176,0.12);
+
+  --text:         #0d1020;
+  --text-2:       #353c58;
+  --text-3:       #6b738f;
+
+  --warn-bg:      #fffbf0;
+  --warn-border:  rgba(160,100,0,0.25);
+  --warn:         #7a5500;
+
+  --sith:         #a02020;
+  --huttese:      #1a7a42;
+  --binary:       #1a5fa0;
+  --death:        #4a5060;
+
+  --shadow: 0 8px 32px rgba(0,0,0,0.10);
+  --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* 亮色模式下导航栏 */
+html.light .nav--scrolled {
+  background: rgba(244,246,252,0.94);
+  border-bottom-color: var(--border);
+}
+
+/* 亮色模式下星空完全隐藏 */
+html.light #starfield,
+html.light canvas[aria-hidden] {
+  opacity: 0 !important;
+}
+
+/* 亮色模式下 Hero 区域：隐藏背景图，改用纯浅色渐变 */
+html.light .hero__bg {
+  opacity: 0;
+}
+html.light .hero__overlay {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 60%),
+    linear-gradient(180deg, #e8ecf8 0%, #f4f6fc 100%);
+}
+html.light .hero__orb--1 {
+  background: radial-gradient(ellipse, rgba(138,106,26,0.10) 0%, transparent 70%);
+}
+html.light .hero__orb--2 {
+  background: radial-gradient(ellipse, rgba(37,99,176,0.08) 0%, transparent 70%);
+}
+html.light .hero__deco {
+  opacity: 0.04;
+}
+
+/* 亮色模式下 Hero 文字全部改为深色 */
+html.light .hero__eyebrow {
+  color: rgba(138,106,26,0.75);
+}
+html.light .hero__eyebrow-line {
+  background: linear-gradient(90deg, transparent, rgba(138,106,26,0.35));
+}
+html.light .hero__eyebrow-line:last-child {
+  background: linear-gradient(270deg, transparent, rgba(138,106,26,0.35));
+}
+html.light .hero__title-word--1 {
+  color: #0d1020;
+  text-shadow: none;
+}
+html.light .hero__title-word--gold {
+  color: #8a6a1a;
+}
+html.light .hero__sub {
+  color: #353c58;
+  text-shadow: none;
+}
+html.light .hero__cta {
+  background: linear-gradient(135deg, rgba(138,106,26,0.14), rgba(138,106,26,0.05));
+  border-color: rgba(138,106,26,0.35);
+  color: #7a5500;
+}
+html.light .hero__cta:hover {
+  color: #5a3d00;
+  border-color: #8a6a1a;
+}
+html.light .hero__scroll-line {
+  background: linear-gradient(180deg, transparent, rgba(138,106,26,0.6));
+}
+
+/* 亮色模式下 pill 标签 */
+html.light .pill {
+  background: rgba(255,255,255,0.85);
+  color: var(--text-2);
+  border-color: var(--border-2);
+}
+
+/* 亮色模式下翻译器输出区 */
+html.light .tx__pane--out {
+  background: rgba(0,0,0,0.03);
+}
+
+/* 亮色模式下 warn strip strong 文字 */
+html.light .warn-strip__inner strong {
+  color: #7a4a00;
+}
+
+/* 亮色模式下移动端菜单 */
+html.light {
+  --nav-mobile-bg: rgba(244,246,252,0.98);
+}
+html.light .nav__links .nav__link {
+  color: var(--text-2);
+}
+html.light .nav__links .nav__link:hover {
+  color: var(--text);
+  background: var(--bg-3);
+}
+html.light .nav__links .nav__link--active {
+  color: var(--gold);
+}
+html.light .nav__links .nav__link--sith:hover   { color: #a02020; }
+html.light .nav__links .nav__link--huttese:hover { color: #1a7a42; }
+html.light .nav__links .nav__link--binary:hover  { color: #1a5fa0; }
+html.light .nav__links .nav__link--death:hover   { color: #4a5060; }
+
+/* 亮色模式下 showcase 展示图 */
+html.light .showcase__frame {
+  border-color: var(--border-2);
+  box-shadow: var(--shadow);
+}
+html.light .showcase__img {
+  filter: brightness(1.15) saturate(0.6) contrast(0.9);
+  opacity: 0.75;
+}
+html.light .showcase__glow {
+  background: linear-gradient(180deg, transparent 40%, rgba(244,246,252,0.85) 100%);
+}
+
+/* 亮色模式下 nav 链接颜色 */
+html.light .nav__link { color: var(--text-2); }
+html.light .nav__link:hover { color: var(--text); }
+html.light .nav__link--active { color: var(--gold); }
+html.light .nav__link--sith:hover   { color: #a02020; }
+html.light .nav__link--huttese:hover { color: #1a7a42; }
+html.light .nav__link--binary:hover { color: #1a5fa0; }
+html.light .nav__link--death:hover  { color: #4a5060; }
+
+/* 亮色模式下 swap 按钮 */
+html.light .tx__swap {
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+/* 亮色模式下 tx__btn 工具栏按钮 */
+html.light .tx__btn {
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+html.light .tx__btn:hover {
+  background: var(--bg-3);
+  color: var(--text);
+}
+
+/* 亮色模式下字母卡片 */
+html.light .alpha-card {
+  background: var(--surface);
+  border-color: var(--border-2);
+}
+html.light .alpha-card:hover {
+  border-color: var(--gold-dim);
+}
+
+/* 亮色模式下 section-label 分割线 */
+html.light .section-label__line {
+  background: linear-gradient(90deg, transparent, var(--border-2), transparent);
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body {
@@ -146,6 +337,26 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
 }
+/* 亮暗切换按钮 */
+.nav__theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  font-size: 16px;
+  transition: background var(--t), border-color var(--t), transform var(--t);
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.nav__theme-btn:hover {
+  background: var(--surface-2);
+  transform: scale(1.1);
+}
+
 .nav__logo {
   display: flex;
   align-items: center;
@@ -804,6 +1015,20 @@ img { max-width: 100%; height: auto; display: block; }
 .seo-block li::before { content: '—'; color: var(--text-3); flex-shrink: 0; }
 .seo-block li strong { color: var(--text); }
 
+/* COMMENTS */
+.comments-section {
+  padding: 0 0 64px;
+  position: relative;
+  z-index: 1;
+}
+.comments-box {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
 /* FOOTER */
 .footer {
   position: relative;
@@ -829,7 +1054,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* RESPONSIVE */
 @media (max-width: 960px) {
-  .nav__links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: rgba(7,9,15,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 12px 16px; flex-direction: column; gap: 4px; }
+  .nav__links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--nav-mobile-bg, rgba(7,9,15,0.97)); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 12px 16px; flex-direction: column; gap: 4px; }
   .nav__links--open { display: flex; }
   .nav__menu-btn { display: flex; }
   .langs-grid { grid-template-columns: repeat(2,1fr); }
