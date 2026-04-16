@@ -58,6 +58,7 @@ export default function Nav() {
           <li><Link href="/binary"     className={`nav__link nav__link--binary${isActive('/binary') ? ' nav__link--active' : ''}`}>Binary</Link></li>
           <li><Link href="/deathtrooper" className={`nav__link nav__link--death${isActive('/deathtrooper') ? ' nav__link--active' : ''}`}>Death Trooper</Link></li>
           <li><Link href="/alphabet"   className={`nav__link nav__link--chart${isActive('/alphabet') ? ' nav__link--active' : ''}`}>Alphabet Chart</Link></li>
+          <li><Link href="/font-download" className={`nav__link${isActive('/font-download') ? ' nav__link--active' : ''}`}>Font Download</Link></li>
         </ul>
 
         {/* 亮暗切换按钮 */}
