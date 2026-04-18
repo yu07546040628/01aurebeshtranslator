@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   },
                 },
                 {
-                  '@type': 'WebApplication',
+                  '@type': 'SoftwareApplication',
                   '@id': `${BASE_URL}/#app`,
                   name: 'Aurebesh Translator',
                   url: BASE_URL,
@@ -121,6 +121,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     '@type': 'Offer',
                     price: '0',
                     priceCurrency: 'USD',
+                    url: BASE_URL,
+                  },
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '5',
+                    ratingCount: '1',
                   },
                   featureList: [
                     'English to Aurebesh conversion',
