@@ -6,6 +6,9 @@ import Nav from '@/components/Nav'
 export const metadata: Metadata = {
   title: 'Download Aurebesh Font – Free Star Wars Font',
   description: 'Download the Aurebesh font for free (personal use). Step-by-step guide to install the Star Wars galaxy script font on Windows and Mac.',
+  alternates: {
+    canonical: 'https://www.freeaurebesh.com/font-download',
+  },
 }
 
 export default function FontDownloadPage() {
