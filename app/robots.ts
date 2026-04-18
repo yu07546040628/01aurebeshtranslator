@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
         // All major search engines + AI crawlers
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/'],
       },
       {
         // Google — full access, no restrictions
