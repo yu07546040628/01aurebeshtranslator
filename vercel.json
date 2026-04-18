@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "freeaurebesh.com" }],
+      "destination": "https://www.freeaurebesh.com/$1",
+      "permanent": true
+    }
+  ]
+}
