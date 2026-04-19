@@ -480,6 +480,8 @@ export default function Home() {
             <Link href="/about">About</Link>
           </nav>
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
+          <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',justifyContent:'center',marginTop:'12px'}}>
             <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="40" width="auto" />

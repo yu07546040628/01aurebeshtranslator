@@ -89,6 +89,26 @@ export default function AboutPage() {
             </ul>
           </section>
 
+          <section className="p-6 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--border-2)' }}>
+            <h2 className="text-xl font-bold mb-3" style={{ color: 'var(--text)' }}>Contact</h2>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>
+              Questions, suggestions, or just want to share your Aurebesh tattoo? Reach out at{' '}
+              <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>
+                yu07546040628@gmail.com
+              </a>
+            </p>
+          </section>
+
+          <section className="p-6 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--border-2)' }}>
+            <h2 className="text-xl font-bold mb-3" style={{ color: 'var(--text)' }}>Contact</h2>
+            <p className="leading-relaxed" style={{ color: 'var(--text-2)' }}>
+              Have a suggestion, found a bug, or just want to say hi?{' '}
+              <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>
+                yu07546040628@gmail.com
+              </a>
+            </p>
+          </section>
+
           <div className="text-center pt-4">
             <Link
               href="/"
