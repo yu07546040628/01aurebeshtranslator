@@ -376,8 +376,8 @@ export default function BinaryPage() {
           <a href="https://aidirs.best" target="_blank" rel="noopener">
             <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{marginTop:'12px'}} />
           </a>
-          <a href="https://aidirs.best" target="_blank" rel="noopener">
-            <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{marginTop:'12px'}} />
+          <a href="https://www.justsimple.tools" target="_blank" rel="noopener">
+            <img src="https://www.justsimple.tools/badge.svg" width="150" alt="Listed on JustSimple Tools" style={{marginTop:'12px'}} />
           </a>
         </div>
       </footer>
