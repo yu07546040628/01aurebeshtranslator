@@ -325,6 +325,10 @@ export default function Home() {
                       <svg viewBox="0 0 16 16" fill="none" aria-hidden><path d="M8 2v8m0 0-3-3m3 3 3-3M2 12v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       SVG
                     </button>
+                    <button className="tx__btn tx__btn--gold" onClick={handleShare} disabled={!input} aria-label="Share link">
+                      <svg viewBox="0 0 16 16" fill="none" aria-hidden><circle cx="12" cy="3" r="1.5" stroke="currentColor" strokeWidth="1.4"/><circle cx="12" cy="13" r="1.5" stroke="currentColor" strokeWidth="1.4"/><circle cx="4" cy="8" r="1.5" stroke="currentColor" strokeWidth="1.4"/><path d="M10.5 3.7 5.5 7.3M5.5 8.7l5 3.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>
+                      Share
+                    </button>
                   </div>
                 </div>
               </div>
@@ -480,7 +484,6 @@ export default function Home() {
             <Link href="/about">About</Link>
           </nav>
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
-          <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
           <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',justifyContent:'center',marginTop:'12px'}}>
             <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
