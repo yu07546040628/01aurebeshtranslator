@@ -327,6 +327,9 @@ export default function SithPage() {
             <a href="https://www.justsimple.tools" target="_blank" rel="noopener">
               <img src="https://www.justsimple.tools/badge.svg" alt="Listed on JustSimple Tools" height="44" width="auto" />
             </a>
+            <a href="https://saasfame.com/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+              <img src="https://saasfame.com/badge-dark.svg" alt="Featured on saasfame.com" height="54" width="auto" />
+            </a>
           </div>
         </div>
       </footer>
