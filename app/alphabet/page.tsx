@@ -194,6 +194,12 @@ export default function AlphabetPage() {
           <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
             <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
           </a>
+          <a href="https://aidirs.best" target="_blank" rel="noopener">
+            <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{marginTop:'12px'}} />
+          </a>
+          <a href="https://aidirs.best" target="_blank" rel="noopener">
+            <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>
