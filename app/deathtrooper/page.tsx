@@ -342,8 +342,8 @@ export default function DeathTrooperPage() {
             <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="44" width="auto" />
             </a>
-            <a href="https://aidirs.best" target="_blank" rel="noopener">
-              <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" height="44" width="auto" />
+            <a href="https://aidirs.best" target="_blank" rel="noopener" style={{background:'#1a1a2e',borderRadius:'8px',display:'inline-flex',alignItems:'center'}}>
+              <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{borderRadius:'8px'}} />
             </a>
             <a href="https://www.justsimple.tools" target="_blank" rel="noopener">
               <img src="https://www.justsimple.tools/badge.svg" alt="Listed on JustSimple Tools" height="44" width="auto" />

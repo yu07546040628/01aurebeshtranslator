@@ -325,10 +325,6 @@ export default function Home() {
                       <svg viewBox="0 0 16 16" fill="none" aria-hidden><path d="M8 2v8m0 0-3-3m3 3 3-3M2 12v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       SVG
                     </button>
-                    <button className="tx__btn tx__btn--gold" onClick={handleShare} disabled={!input} aria-label="Share link">
-                      <svg viewBox="0 0 16 16" fill="none" aria-hidden><circle cx="12" cy="3" r="1.5" stroke="currentColor" strokeWidth="1.4"/><circle cx="12" cy="13" r="1.5" stroke="currentColor" strokeWidth="1.4"/><circle cx="4" cy="8" r="1.5" stroke="currentColor" strokeWidth="1.4"/><path d="M10.5 3.7 5.5 7.3M5.5 8.7l5 3.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>
-                      Share
-                    </button>
                   </div>
                 </div>
               </div>
@@ -488,8 +484,8 @@ export default function Home() {
             <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="40" width="auto" />
             </a>
-            <a href="https://aidirs.best" target="_blank" rel="noopener">
-              <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" height="40" width="auto" />
+            <a href="https://aidirs.best" target="_blank" rel="noopener" style={{background:'#1a1a2e',borderRadius:'8px',display:'inline-flex',alignItems:'center'}}>
+              <img src="https://aidirs.best/dark.svg" alt="Featured on Aidirs" width="200" height="56" style={{borderRadius:'8px'}} />
             </a>
             <a href="https://www.justsimple.tools" target="_blank" rel="noopener">
               <img src="https://www.justsimple.tools/badge.svg" alt="Listed on JustSimple Tools" height="40" width="auto" />
