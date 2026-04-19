@@ -471,8 +471,14 @@ export default function Home() {
             <Link href="/huttese">Huttese</Link>
             <Link href="/binary">Droidspeak</Link>
             <Link href="/deathtrooper">Death Trooper</Link>
+            <Link href="/alphabet">Alphabet Chart</Link>
+            <Link href="/font-download">Font Download</Link>
+            <Link href="/about">About</Link>
           </nav>
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
 

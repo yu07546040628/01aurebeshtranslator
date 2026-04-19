@@ -317,6 +317,34 @@ export default function HuttesePage() {
             </div>
           </div>
         </section>
+
+        {/* SEO Content */}
+        <section className="reveal" style={{padding:'0 0 64px'}}>
+          <div className="section-inner">
+            <div className="info-grid">
+              <article className="info-card info-card--huttese">
+                <h2 className="info-card__title">What is Huttese?</h2>
+                <p>Huttese is the language spoken by the Hutt species in Star Wars — most famously by Jabba the Hutt in Return of the Jedi and The Phantom Menace. It is a guttural, consonant-heavy language with a distinct rhythm that sounds nothing like Basic (the common tongue of the galaxy). Huttese is one of the most widely spoken languages in the Outer Rim, used by smugglers, bounty hunters, and crime lords throughout the Star Wars universe.</p>
+              </article>
+              <article className="info-card info-card--huttese">
+                <h2 className="info-card__title">How This Translator Works</h2>
+                <p>This translator uses a vocabulary replacement engine with over 200 Huttese words sourced from Star Wars films, games, and expanded universe materials. When you type English text, it scans for known words and replaces them with their Huttese equivalents. Words without a direct translation are left in English — just as characters in Star Wars often mix Basic and Huttese in the same sentence. Partial matches are highlighted so you can see exactly what was translated.</p>
+              </article>
+              <article className="info-card info-card--huttese">
+                <h2 className="info-card__title">Famous Huttese Phrases</h2>
+                <ul className="info-list">
+                  <li><strong>Boska!</strong> — Let's go! / Move it!</li>
+                  <li><strong>Chuba!</strong> — You! (aggressive)</li>
+                  <li><strong>Poodoo</strong> — Fodder / worthless (an insult)</li>
+                  <li><strong>Sleemo</strong> — Slimeball (insult)</li>
+                  <li><strong>Wermo</strong> — Idiot / fool</li>
+                  <li><strong>Coona tee-tocky malia?</strong> — What do you want?</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
@@ -336,6 +364,9 @@ export default function HuttesePage() {
             <a href="/alphabet">Alphabet Chart</a>
           </nav>
           <p className="footer__note">Fan project. Star Wars and all related trademarks are property of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Droidspeak / Binary Translator – R2-D2 Language | Star Wars',
+  title: 'Droidspeak Translator – R2-D2 Binary Language | Star Wars',
   description: 'Translate text to R2-D2\'s Droidspeak Binary language from Star Wars. Morse-style beep encoding with optional audio playback. Includes BB-8 and C-3PO droid sound reference.',
   keywords: [
     'R2-D2 language translator',

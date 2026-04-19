@@ -291,6 +291,34 @@ export default function DeathTrooperPage() {
             </div>
           </div>
         </section>
+
+        {/* SEO Content */}
+        <section className="reveal" style={{padding:'0 0 64px'}}>
+          <div className="section-inner">
+            <div className="info-grid">
+              <article className="info-card info-card--death">
+                <h2 className="info-card__title">What is the Death Trooper Cipher?</h2>
+                <p>The Death Trooper Cipher is an Imperial encryption system referenced in Star Wars Rogue One lore. It combines two classical ciphers — Atbash and Caesar shift — to encode messages that are then rendered as Aurebesh glyphs, making them visually unrecognizable to anyone without the key.</p>
+                <p style={{marginTop:'0.75rem'}}>Death Troopers were elite Imperial soldiers who served as bodyguards and enforcers for high-ranking officers. Their encrypted communications were designed to be unreadable even if intercepted by Rebel forces.</p>
+              </article>
+              <article className="info-card info-card--death">
+                <h2 className="info-card__title">How Atbash + Caesar Works</h2>
+                <p>The cipher runs in two stages. First, Atbash mirrors every letter — A becomes Z, B becomes Y, and so on. Then a Caesar shift moves each letter forward by a set number of positions (default: 5). The result is then converted to Aurebesh glyphs. To decrypt, reverse both operations: undo the Caesar shift, then apply Atbash again.</p>
+              </article>
+              <article className="info-card info-card--death">
+                <h2 className="info-card__title">Common Uses</h2>
+                <ul className="info-list">
+                  <li>Cosplay — encode prop documents and datapads</li>
+                  <li>Fan fiction — add authentic Imperial communications</li>
+                  <li>Escape rooms — Star Wars-themed puzzle design</li>
+                  <li>Secret messages — encode text for other fans to crack</li>
+                  <li>Party games — Star Wars-themed cipher challenges</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
@@ -310,6 +338,9 @@ export default function DeathTrooperPage() {
             <a href="/alphabet">Alphabet Chart</a>
           </nav>
           <p className="footer__note">Fan project. Star Wars and all related trademarks are property of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>

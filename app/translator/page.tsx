@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import Nav from '@/components/Nav'
 import { engToAurTokens, aurToEng, DIPTHONGS, ENG_TO_AUR } from '@/lib/aurebesh'
 import { engToSith, SITH_MAP } from '@/lib/sith'
 import { engToHuttese } from '@/lib/huttese'
@@ -83,7 +84,9 @@ export default function TranslatorPage() {
   }
 
   return (
-    <div className="min-h-screen pt-20 pb-16 px-4" style={{ background: 'var(--bg)' }}>
+    <>
+      <Nav />
+      <div className="min-h-screen pt-20 pb-16 px-4" style={{ background: 'var(--bg)' }}>
       <div className="max-w-5xl mx-auto">
 
         {/* Language Tabs */}
@@ -259,6 +262,7 @@ export default function TranslatorPage() {
 
       </div>
     </div>
+    </>
   )
 }
 

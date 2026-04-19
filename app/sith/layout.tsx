@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sith Alphabet Translator – Ur-Kittât Script | Star Wars',
+  title: 'Sith Alphabet Translator – Ur-Kittât Dark Side Script',
   description: 'Translate English to the Sith Alphabet (Ur-Kittât) — the ancient dark side script from Star Wars. Free converter with all 26 Sith letters and instant visual output.',
   keywords: [
     'Sith alphabet translator',

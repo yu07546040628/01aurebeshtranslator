@@ -1,0 +1,20 @@
+# llms.txt — freeaurebesh.com
+
+## Site
+Aurebesh Translator — free Star Wars language tools at https://www.freeaurebesh.com
+
+## What this site does
+Converts English text to Star Wars writing systems: Aurebesh, Sith Alphabet (Ur-Kittât), Huttese, Droidspeak Binary, and Death Trooper Cipher. Supports PNG/SVG export and reverse translation.
+
+## Pages
+- / — Aurebesh Translator (main tool, full dipthong support, PNG/SVG export)
+- /alphabet — Aurebesh Alphabet Chart (all 26 letters + 12 dipthongs with names and pronunciation)
+- /sith — Sith Alphabet Translator (Ur-Kittât, 26-letter cipher)
+- /huttese — Huttese Translator (Jabba's language, 200+ vocabulary words)
+- /binary — Droidspeak Binary Translator (R2-D2 Morse-style encoding, audio playback)
+- /deathtrooper — Death Trooper Cipher (Atbash + Caesar shift, Rogue One)
+- /font-download — Download Aurebesh Font (install guide for Windows and Mac)
+- /about — About this project
+
+## Content policy
+This is a fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.

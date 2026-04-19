@@ -147,6 +147,31 @@ export default function AlphabetPage() {
           <a href="/#translator" className="alpha-hero__btn alpha-hero__btn--primary">Open Translator →</a>
         </section>
 
+        {/* SEO content */}
+        <section className="alpha-section" style={{paddingTop: 0}}>
+          <div className="alpha-section__header">
+            <h2 className="alpha-section__title">About the Aurebesh Alphabet</h2>
+          </div>
+          <div className="glyph-grid" style={{display:'block'}}>
+            <article style={{marginBottom:'1.5rem'}}>
+              <h3 style={{marginBottom:'0.5rem'}}>What is Aurebesh?</h3>
+              <p>Aurebesh is the writing system of the Star Wars galaxy, used throughout the Galactic Republic and Empire. It appears on ship displays, signage, helmets, and props in every Star Wars film and series. The name comes from its first two letters — Aurek (A) and Besh (B) — just as "alphabet" comes from Greek Alpha and Beta.</p>
+            </article>
+            <article style={{marginBottom:'1.5rem'}}>
+              <h3 style={{marginBottom:'0.5rem'}}>How Dipthongs Work</h3>
+              <p>Dipthongs are two-letter combinations that map to a single Aurebesh glyph. There are 12 canonical dipthongs: CH, EE, EO, KH, NG, OO, SH, TH, YA, BL, KR, and ZH. When translating, dipthongs are matched before single letters — so "the" becomes one TH glyph plus one E glyph, not T + H + E. This is the most common mistake in other Aurebesh translators.</p>
+            </article>
+            <article style={{marginBottom:'1.5rem'}}>
+              <h3 style={{marginBottom:'0.5rem'}}>The Uppercase Mirror Rule</h3>
+              <p>In canonical Aurebesh, every capital letter is the horizontal mirror of its lowercase form. This is intentional and film-accurate — verified across props, merchandise, and official Star Wars materials. It is not a font bug. Always check case before using Aurebesh in a tattoo or screen-accurate prop.</p>
+            </article>
+            <article>
+              <h3 style={{marginBottom:'0.5rem'}}>Using This Chart</h3>
+              <p>Each card shows the Aurebesh glyph, the English letter it represents, the official Aurebesh letter name, and a pronunciation note. Dipthong cards show the two-letter combination and the single glyph it maps to. Use the <a href="/#translator">Aurebesh Translator</a> to convert full words and sentences automatically.</p>
+            </article>
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
@@ -166,6 +191,9 @@ export default function AlphabetPage() {
             <a href="/alphabet">Alphabet Chart</a>
           </nav>
           <p className="footer__note">Fan project. Star Wars and all related trademarks are property of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>

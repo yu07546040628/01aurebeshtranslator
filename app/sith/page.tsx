@@ -233,6 +233,71 @@ export default function SithPage() {
             </div>
           </div>
         </section>
+
+        {/* SEO Content */}
+        <section className="reveal" style={{padding:'0 0 64px'}}>
+          <div className="section-inner">
+            <div className="info-grid">
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">What is the Sith Alphabet?</h2>
+                <p>The Sith Alphabet, known as Ur-Kittât, is the ancient writing system of the Sith Order in Star Wars. Unlike Aurebesh — the common Galactic script — Ur-Kittât was used exclusively by Sith Lords and their followers. Its angular, geometric forms were carved into the walls of Sith tombs on Korriban and Moraband, inscribed on holocrons, and etched into ancient weapons and armor.</p>
+                <p style={{marginTop:'0.75rem'}}>The script appears throughout Star Wars Legends material, The Old Republic game, and various canon sources. It reflects the Sith philosophy: sharp, aggressive, and built for power rather than elegance.</p>
+              </article>
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">How to Use This Translator</h2>
+                <p>Type any English text into the input box and it converts instantly to Ur-Kittât glyphs. The cipher is a straightforward 1:1 letter substitution — each of the 26 English letters maps to a unique Sith glyph. Unlike Aurebesh, there are no dipthongs to worry about.</p>
+                <p style={{marginTop:'0.75rem'}}>Use the glyph chart below the translator to click individual letters into the input. The reverse direction lets you paste Sith glyphs and decode them back to English.</p>
+              </article>
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">Sith Alphabet vs. Aurebesh</h2>
+                <ul className="info-list">
+                  <li><strong>Aurebesh</strong> is the standard Galactic script — readable by most citizens of the Republic and Empire</li>
+                  <li><strong>Ur-Kittât</strong> is ancient and secret — used by Sith to hide knowledge from outsiders</li>
+                  <li>Aurebesh has 12 dipthong glyphs; Ur-Kittât uses pure 1:1 substitution</li>
+                  <li>Aurebesh appears on ship displays and signage; Sith script appears on tombs and artifacts</li>
+                  <li>Both are used in Star Wars tattoos and cosplay props</li>
+                </ul>
+              </article>
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">Common Uses</h2>
+                <ul className="info-list">
+                  <li><strong>Tattoos</strong> — Sith script tattoos are popular among Star Wars fans who prefer the dark side aesthetic</li>
+                  <li><strong>Cosplay</strong> — screen-accurate Sith Lord armor, robes, and props</li>
+                  <li><strong>Fan art</strong> — add authentic Sith inscriptions to artwork and illustrations</li>
+                  <li><strong>Secret messages</strong> — encode text that only other fans can read</li>
+                  <li><strong>Game props</strong> — TTRPG and LARP Star Wars campaigns</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content */}
+        <section className="reveal" style={{padding:'0 0 64px'}}>
+          <div className="section-inner">
+            <div className="info-grid">
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">What is the Sith Alphabet?</h2>
+                <p>The Sith Alphabet, known as Ur-Kittât, is the ancient writing system of the Sith Order in Star Wars. It appears carved into the walls of Sith tombs on Korriban and Moraband, etched into Sith holocrons, and inscribed on artifacts from the Old Republic era. Unlike Aurebesh — the common Galactic script — Ur-Kittât was used exclusively by Sith Lords and their followers, making it a symbol of dark side power and forbidden knowledge.</p>
+              </article>
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">Sith Alphabet vs Aurebesh</h2>
+                <p>Both scripts map to the same 26 English letters, but they work differently. Aurebesh has 12 dipthong glyphs (CH, SH, TH, OO, etc.) that combine two letters into one symbol. Ur-Kittât is a pure 1:1 cipher — every letter gets exactly one glyph, no exceptions. Aurebesh is the everyday script of the galaxy; Ur-Kittât is ancient, secretive, and tied to the dark side. If you want the standard Star Wars script, use the <a href="/" style={{color:'inherit',textDecoration:'underline'}}>Aurebesh Translator</a> instead.</p>
+              </article>
+              <article className="info-card info-card--sith">
+                <h2 className="info-card__title">Common Uses for Sith Script</h2>
+                <ul className="info-list">
+                  <li>Tattoos — dark side-themed Star Wars ink</li>
+                  <li>Cosplay props — Sith holocrons, lightsaber hilts, armor</li>
+                  <li>Fan art — authentic inscriptions on Sith-themed artwork</li>
+                  <li>Secret messages — encode text only Star Wars fans can read</li>
+                  <li>Game design — lore-accurate text for Star Wars tabletop or video games</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
@@ -252,6 +317,9 @@ export default function SithPage() {
             <a href="/alphabet">Alphabet Chart</a>
           </nav>
           <p className="footer__note">Fan project. Star Wars and all related trademarks are property of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>

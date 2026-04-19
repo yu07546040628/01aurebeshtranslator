@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Aurebesh Alphabet Chart – Complete Glyph Reference | Star Wars',
+  title: 'Aurebesh Alphabet Chart – All 26 Letters & 12 Dipthongs',
   description: 'Complete Aurebesh alphabet chart — all 26 letters and 12 dipthongs with English equivalents, Aurebesh names, and pronunciation guide. Printable Star Wars script reference.',
   keywords: [
     'Aurebesh alphabet chart',

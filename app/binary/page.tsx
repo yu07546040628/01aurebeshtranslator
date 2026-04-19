@@ -324,6 +324,33 @@ export default function BinaryPage() {
             </div>
           </div>
         </section>
+
+        {/* SEO Content */}
+        <section className="reveal" style={{padding:'0 0 64px'}}>
+          <div className="section-inner">
+            <div className="info-grid">
+              <article className="info-card info-card--binary">
+                <h2 className="info-card__title">What is Droidspeak?</h2>
+                <p>Droidspeak — also called Binary — is the communication language used by astromech droids throughout the Star Wars galaxy. R2-D2, BB-8, and other droids communicate entirely through sequences of beeps, whistles, and electronic tones. While most humans hear only noise, protocol droids like C-3PO can translate these sounds into full sentences. This translator converts English text into a Morse-style beep pattern that mimics droid communication, with optional audio playback.</p>
+              </article>
+              <article className="info-card info-card--binary">
+                <h2 className="info-card__title">R2-D2 and BB-8</h2>
+                <p>R2-D2 is the most iconic droidspeak communicator in Star Wars, appearing in all nine Skywalker Saga films. His voice was created by sound designer Ben Burtt using electronic synthesizers and his own voice. BB-8 from the sequel trilogy uses a similar beep language, with vocal consultant Ben Schwartz contributing to the character's personality. Both droids are understood by C-3PO, who acts as a translator for human characters throughout the films.</p>
+              </article>
+              <article className="info-card info-card--binary">
+                <h2 className="info-card__title">Common Uses</h2>
+                <ul className="info-list">
+                  <li>Cosplay — encode messages on R2-D2 or BB-8 props</li>
+                  <li>Fan projects — add droid dialogue to Star Wars fan films</li>
+                  <li>Secret messages — communicate in droidspeak with other fans</li>
+                  <li>Sound design — reference for droid sound patterns</li>
+                  <li>Education — learn about Morse code through Star Wars</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
@@ -343,6 +370,9 @@ export default function BinaryPage() {
             <a href="/alphabet">Alphabet Chart</a>
           </nav>
           <p className="footer__note">Fan project. Star Wars and all related trademarks are property of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
+          <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+            <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" style={{marginTop:'12px'}} />
+          </a>
         </div>
       </footer>
     </>
