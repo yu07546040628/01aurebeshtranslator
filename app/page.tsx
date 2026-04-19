@@ -151,20 +151,28 @@ export default function Home() {
     const el = document.querySelector('.tx__output') as HTMLElement;
     if (!el) return;
     import('html2canvas').then(({ default: html2canvas }) => {
-      html2canvas(el, { backgroundColor: '#0d1020', scale: 2 }).then(canvas => {
+      html2canvas(el, { backgroundColor: null, scale: 2 }).then(canvas => {
         const a = document.createElement('a');
         a.download = 'aurebesh.png'; a.href = canvas.toDataURL(); a.click();
       });
     });
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     const url = new URL(window.location.href);
     url.searchParams.set('t', input);
     url.searchParams.set('dir', dir);
-    navigator.clipboard.writeText(url.toString()).catch(() => {
-      prompt('Share link:', url.toString());
-    });
+    const shareUrl = url.toString();
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'Aurebesh Translator', url: shareUrl });
+      } catch {}
+    } else {
+      await navigator.clipboard.writeText(shareUrl).catch(() => {
+        prompt('Share link:', shareUrl);
+      });
+      alert('Link copied to clipboard!');
+    }
   };
 
   const insertChar = (ch: string) => {
