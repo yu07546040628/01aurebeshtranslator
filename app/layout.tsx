@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 const BASE_URL = 'https://www.freeaurebesh.com';
 
@@ -143,7 +144,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>{children}<Footer /></body>
     </html>
   )
 }

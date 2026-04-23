@@ -59,6 +59,7 @@ export default function Nav() {
           <li><Link href="/deathtrooper" className={`nav__link nav__link--death${isActive('/deathtrooper') ? ' nav__link--active' : ''}`}>Death Trooper</Link></li>
           <li><Link href="/alphabet"   className={`nav__link nav__link--chart${isActive('/alphabet') ? ' nav__link--active' : ''}`}>Alphabet Chart</Link></li>
           <li><Link href="/font-download" className={`nav__link${isActive('/font-download') ? ' nav__link--active' : ''}`}>Font Download</Link></li>
+          <li><Link href="/blog"          className={`nav__link${isActive('/blog') ? ' nav__link--active' : ''}`}>Blog</Link></li>
           <li><Link href="/about"        className={`nav__link${isActive('/about') ? ' nav__link--active' : ''}`}>About</Link></li>
         </ul>
 

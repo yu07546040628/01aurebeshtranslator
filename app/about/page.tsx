@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Nav from '@/components/Nav'
 
 export const metadata: Metadata = {
   title: 'About Aurebesh Translator – Star Wars Language Tools',
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
+    <>
+    <Nav />
     <div className="min-h-screen pt-20 pb-16 px-4" style={{ background: 'var(--bg)' }}>
       <div className="max-w-3xl mx-auto">
 
@@ -99,16 +102,6 @@ export default function AboutPage() {
             </p>
           </section>
 
-          <section className="p-6 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--border-2)' }}>
-            <h2 className="text-xl font-bold mb-3" style={{ color: 'var(--text)' }}>Contact</h2>
-            <p className="leading-relaxed" style={{ color: 'var(--text-2)' }}>
-              Have a suggestion, found a bug, or just want to say hi?{' '}
-              <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>
-                yu07546040628@gmail.com
-              </a>
-            </p>
-          </section>
-
           <div className="text-center pt-4">
             <Link
               href="/"
@@ -122,5 +115,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
