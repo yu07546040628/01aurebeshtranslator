@@ -498,6 +498,9 @@ export default function Home() {
             <a href="https://saasfame.com/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://saasfame.com/badge-dark.svg" alt="Featured on saasfame.com" height="54" width="auto" />
             </a>
+            <a href="https://toolfame.com/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
+              <img src="https://toolfame.com/badge-dark.svg" alt="Featured on toolfame.com" style={{height:'54px', width:'auto'}} />
+            </a>
           </div>
         </div>
       </footer>
