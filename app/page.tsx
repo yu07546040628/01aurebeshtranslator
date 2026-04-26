@@ -501,6 +501,9 @@ export default function Home() {
             <a href="https://toolfame.com/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://toolfame.com/badge-dark.svg" alt="Featured on toolfame.com" style={{height:'54px', width:'auto'}} />
             </a>
+            <a href="https://huzzler.so/products/mPJsolpLDA/free-aurebesh-translator?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=badge" target="_blank" rel="noopener noreferrer">
+              <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" style={{height:'54px', width:'auto'}} />
+            </a>
           </div>
         </div>
       </footer>
