@@ -225,51 +225,10 @@ export default function Home() {
             <span className="pill">✓ Reverse Translation</span>
             <span className="pill">✓ Tattoo Safe</span>
           </div>
-          <a href="#translator" className="hero__cta">
-            Start Translating
-            <svg viewBox="0 0 16 16" fill="none" aria-hidden><path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </a>
-        </div>
-        <div className="hero__scroll-hint" aria-hidden>
-          <div className="hero__scroll-line" />
-        </div>
-      </header>
 
-      {/* ── WARNING STRIP ── */}
-      <div className="warn-strip">
-        <div className="warn-strip__inner">
-          <span className="warn-strip__icon">⚠</span>
-          <p><strong>Uppercase = Mirror Image.</strong> In canon Aurebesh, capital letters are the horizontal mirror of lowercase — intentional, film-accurate. <strong>Double-check before tattoos or props!</strong></p>
-        </div>
-      </div>
-
-      <main>
-
-        {/* ── SHOWCASE IMAGE ── */}
-        <section className="showcase reveal">
-          <div className="wrap">
-            <div className="showcase__frame">
-              <img
-                className="showcase__img"
-                src="/pic/showcase.png"
-                alt="Holographic Aurebesh translation interface showing glowing Star Wars script characters"
-              />
-              <div className="showcase__glow" aria-hidden />
-            </div>
-          </div>
-        </section>
-
-        {/* ── TRANSLATOR ── */}
-        <section className="tx-section reveal" id="translator">
-          <div className="wrap">
-            <div className="section-label">
-              <span className="section-label__line" />
-              <span className="section-label__text">Translator</span>
-              <span className="section-label__line" />
-            </div>
-
+          {/* ── Hero inline full translator ── */}
+          <div className="hero__translator">
             <div className="tx">
-              {/* Direction bar */}
               <div className="tx__bar">
                 <span className="tx__lang" style={{ color: dir === 'eng2aur' ? 'var(--text)' : 'var(--text-3)' }}>English</span>
                 <button className="tx__swap" onClick={handleSwap} aria-label="Swap direction">
@@ -280,8 +239,6 @@ export default function Home() {
                 </button>
                 <span className="tx__lang tx__lang--right" style={{ color: dir === 'aur2eng' ? 'var(--text)' : 'var(--gold)', opacity: 0.7 }}>Aurebesh</span>
               </div>
-
-              {/* Panes */}
               <div className="tx__panes">
                 <div className="tx__pane tx__pane--in">
                   <textarea
@@ -298,11 +255,7 @@ export default function Home() {
                     <button className="tx__clear" onClick={() => setInput('')}>✕ Clear</button>
                   </div>
                 </div>
-
-                <div className="tx__divider" aria-hidden>
-                  <div className="tx__divider-line" />
-                </div>
-
+                <div className="tx__divider" aria-hidden><div className="tx__divider-line" /></div>
                 <div className="tx__pane tx__pane--out">
                   <div className="tx__output" aria-label="Aurebesh output" aria-live="polite">
                     {input.trim()
@@ -334,7 +287,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+        <div className="hero__scroll-hint" aria-hidden>
+          <div className="hero__scroll-line" />
+        </div>
+      </header>
+
+      {/* ── WARNING STRIP ── */}
+      <div className="warn-strip">
+        <div className="warn-strip__inner">
+          <span className="warn-strip__icon">⚠</span>
+          <p><strong>Uppercase = Mirror Image.</strong> In canon Aurebesh, capital letters are the horizontal mirror of lowercase — intentional, film-accurate. <strong>Double-check before tattoos or props!</strong></p>
+        </div>
+      </div>
+
+      <main>
 
         {/* ── ALPHABET CHART ── */}
         <section className="alpha-section reveal" id="alphabet">

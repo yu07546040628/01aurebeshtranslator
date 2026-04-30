@@ -96,14 +96,10 @@ export default function SithPage() {
             <span className="badge badge--binary"><a href="/binary" style={{color:'inherit'}}>🤖 Binary</a></span>
             <span className="badge badge--death"><a href="/deathtrooper" style={{color:'inherit'}}>☠ Death Trooper</a></span>
           </div>
-        </div>
-      </header>
 
-      <main>
-        {/* Translator */}
-        <section className="translator-section reveal">
-          <div className="section-inner">
-            <div className="translator translator--sith">
+          {/* Translator in hero */}
+          <div className="hero__translator" style={{marginTop:'28px'}}>
+            <div className="translator translator--sith" style={{background:'rgba(7,9,15,0.8)',border:'1px solid var(--border-2)',borderRadius:'16px',backdropFilter:'blur(16px)'}}>
               <div className="translator__direction">
                 <span className="lang lang--sith">{direction === 'eng2sith' ? 'English' : 'Sith Alphabet'}</span>
                 <button className="translator__swap translator__swap--sith" onClick={handleSwap} aria-label="Swap direction">⇄ Swap</button>
@@ -116,7 +112,7 @@ export default function SithPage() {
                     className="pane__textarea"
                     placeholder={direction === 'eng2sith' ? 'Type English text here…' : 'Paste Sith glyphs here…'}
                     aria-label="Input"
-                    rows={6}
+                    rows={4}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                   />
@@ -139,7 +135,10 @@ export default function SithPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+
+      <main>
 
         {/* Alphabet Chips */}
         <section className="reveal" style={{padding:'0 0 48px'}}>

@@ -147,14 +147,10 @@ export default function BinaryPage() {
             <span className="badge badge--huttese"><a href="/huttese" style={{color:'inherit'}}>🐸 Huttese</a></span>
             <span className="badge badge--death"><a href="/deathtrooper" style={{color:'inherit'}}>☠ Death Trooper</a></span>
           </div>
-        </div>
-      </header>
 
-      <main>
-        {/* Translator */}
-        <section className="translator-section reveal">
-          <div className="section-inner">
-            <div className="translator translator--binary">
+          {/* Translator in hero */}
+          <div className="hero__translator" style={{marginTop:'28px'}}>
+            <div className="translator translator--binary" style={{background:'rgba(7,9,15,0.8)',border:'1px solid var(--border-2)',borderRadius:'16px',backdropFilter:'blur(16px)'}}>
               <div className="translator__direction">
                 <span className="lang lang--binary">English</span>
                 <button className="translator__swap translator__swap--binary" aria-label="Swap direction">⇄ Swap</button>
@@ -166,7 +162,7 @@ export default function BinaryPage() {
                     className="pane__textarea"
                     placeholder="Type English text here…"
                     aria-label="English input"
-                    rows={6}
+                    rows={4}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                   />
@@ -177,53 +173,18 @@ export default function BinaryPage() {
                 </div>
                 <div className="translator__divider" aria-hidden="true" />
                 <div className="pane pane--output pane--binary-output">
-                  {/* Mode toggle */}
                   <div className="binary-mode-toggle" role="group" aria-label="Output mode">
-                    <button
-                      className={`mode-btn${mode === 'morse' ? ' mode-btn--active' : ''}`}
-                      onClick={() => setMode('morse')}
-                      aria-pressed={mode === 'morse'}
-                    >· — Morse</button>
-                    <button
-                      className={`mode-btn${mode === 'binary' ? ' mode-btn--active' : ''}`}
-                      onClick={() => setMode('binary')}
-                      aria-pressed={mode === 'binary'}
-                    >01 Binary</button>
-                    <button
-                      className={`mode-btn${mode === 'text' ? ' mode-btn--active' : ''}`}
-                      onClick={() => setMode('text')}
-                      aria-pressed={mode === 'text'}
-                    >Text</button>
+                    <button className={`mode-btn${mode === 'morse' ? ' mode-btn--active' : ''}`} onClick={() => setMode('morse')} aria-pressed={mode === 'morse'}>· — Morse</button>
+                    <button className={`mode-btn${mode === 'binary' ? ' mode-btn--active' : ''}`} onClick={() => setMode('binary')} aria-pressed={mode === 'binary'}>01 Binary</button>
+                    <button className={`mode-btn${mode === 'text' ? ' mode-btn--active' : ''}`} onClick={() => setMode('text')} aria-pressed={mode === 'text'}>Text</button>
                   </div>
-
                   <div className="binary-output pane__output" aria-label="Droidspeak output" aria-live="polite">
                     {output || <span className="pane__placeholder">Droidspeak output appears here…</span>}
                   </div>
-
-                  {/* Audio controls */}
                   <div className="audio-controls">
-                    <button
-                      className="audio-btn audio-btn--play"
-                      aria-label="Play droidspeak audio"
-                      onClick={playBeeps}
-                      disabled={isPlaying}
-                    >▶ Play Beeps</button>
-                    <button
-                      className="audio-btn audio-btn--stop"
-                      aria-label="Stop audio"
-                      onClick={stopBeeps}
-                    >■ Stop</button>
-                    <div className="audio-visualizer" aria-hidden="true">
-                      {Array.from({length: 12}).map((_, i) => (
-                        <div
-                          key={i}
-                          className="bar"
-                          style={isPlaying ? {height: `${4 + Math.random() * 20}px`, transition: 'height 0.1s ease'} : {}}
-                        />
-                      ))}
-                    </div>
+                    <button className="audio-btn audio-btn--play" aria-label="Play droidspeak audio" onClick={playBeeps} disabled={isPlaying}>▶ Play Beeps</button>
+                    <button className="audio-btn audio-btn--stop" aria-label="Stop audio" onClick={stopBeeps}>■ Stop</button>
                   </div>
-
                   <div className="toolbar">
                     <button className="toolbar__btn toolbar__btn--binary" onClick={handleCopy} aria-label="Copy to clipboard">
                       ⎘ {copied ? 'Copied!' : 'Copy'}
@@ -233,7 +194,10 @@ export default function BinaryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+
+      <main>
 
         {/* Beep Legend */}
         <section className="beep-section reveal" style={{padding:'0 0 48px'}}>

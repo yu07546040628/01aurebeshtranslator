@@ -597,6 +597,21 @@ img { max-width: 100%; height: auto; display: block; }
   0%,100% { transform: translateY(0); }
   50%      { transform: translateY(4px); }
 }
+.hero__translator {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 24px;
+}
+.hero__translator .tx {
+  background: rgba(7,9,15,0.8);
+  border: 1px solid var(--border-2);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+}
+html.light .hero__translator .tx {
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(0,0,0,0.12);
+}
 .hero__scroll-hint {
   position: absolute;
   bottom: 28px;

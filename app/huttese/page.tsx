@@ -148,14 +148,10 @@ export default function HuttesePage() {
             <span className="badge badge--binary"><a href="/binary" style={{color:'inherit'}}>🤖 Binary</a></span>
             <span className="badge badge--death"><a href="/deathtrooper" style={{color:'inherit'}}>☠ Death Trooper</a></span>
           </div>
-        </div>
-      </header>
 
-      <main>
-        {/* Translator */}
-        <section className="translator-section reveal">
-          <div className="section-inner">
-            <div className="translator translator--huttese">
+          {/* Translator in hero */}
+          <div className="hero__translator" style={{marginTop:'28px'}}>
+            <div className="translator translator--huttese" style={{background:'rgba(7,9,15,0.8)',border:'1px solid var(--border-2)',borderRadius:'16px',backdropFilter:'blur(16px)'}}>
               <div className="translator__direction">
                 <span className="lang lang--huttese">English</span>
                 <span className="lang lang--huttese">Huttese</span>
@@ -167,7 +163,7 @@ export default function HuttesePage() {
                     className="pane__textarea"
                     placeholder="Type English text here…"
                     aria-label="English input"
-                    rows={6}
+                    rows={4}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                   />
@@ -178,25 +174,10 @@ export default function HuttesePage() {
                 </div>
                 <div className="translator__divider" aria-hidden="true" />
                 <div className="pane pane--output pane--huttese-output">
-                  <div className="huttese-legend">
-                    <span className="legend-item">
-                      <span className="legend-dot legend-dot--translated" />
-                      Translated word
-                    </span>
-                    <span className="legend-item">
-                      <span className="legend-dot legend-dot--partial" />
-                      No translation (kept as-is)
-                    </span>
-                  </div>
                   <div className="huttese-output pane__output" aria-label="Huttese output" aria-live="polite">
                     {input.trim() ? (
                       tokens.map((t, i) => (
-                        <span
-                          key={i}
-                          className={t.translated && !/^\s+$/.test(t.word) ? 'word--translated' : 'word--partial'}
-                        >
-                          {t.huttese}
-                        </span>
+                        <span key={i} className={t.translated && !/^\s+$/.test(t.word) ? 'word--translated' : 'word--partial'}>{t.huttese}</span>
                       ))
                     ) : (
                       <span className="pane__placeholder">Huttese translation appears here…</span>
@@ -211,7 +192,10 @@ export default function HuttesePage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+
+      <main>
 
         {/* Famous Phrases */}
         <section className="phrase-section reveal" style={{padding:'0 0 48px'}}>

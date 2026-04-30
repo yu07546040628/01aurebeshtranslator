@@ -116,54 +116,13 @@ export default function DeathTrooperPage() {
             <span className="badge badge--huttese"><a href="/huttese" style={{color:'inherit'}}>🐸 Huttese</a></span>
             <span className="badge badge--binary"><a href="/binary" style={{color:'inherit'}}>🤖 Binary</a></span>
           </div>
-        </div>
-      </header>
 
-      {/* Cipher Mode Bar */}
-      <div className="cipher-mode-bar">
-        <div className="cipher-mode-bar__inner">
-          <span className="cipher-mode-bar__label">Cipher Mode:</span>
-          <div className="cipher-tabs" role="group" aria-label="Cipher mode selection">
-            {(['both', 'atbash', 'caesar'] as CipherMode[]).map(m => (
-              <button
-                key={m}
-                className={`cipher-tab${mode === m ? ' cipher-tab--active' : ''}`}
-                onClick={() => setMode(m)}
-                aria-pressed={mode === m}
-              >
-                <span className="cipher-tab__name">
-                  {m === 'both' ? 'Atbash + Caesar' : m === 'atbash' ? 'Atbash Only' : 'Caesar Only'}
-                </span>
-                <span className="cipher-tab__desc">
-                  {m === 'both' ? 'Full Death Trooper cipher' : m === 'atbash' ? 'A↔Z mirror only' : 'Shift only'}
-                </span>
-              </button>
-            ))}
-          </div>
-          <div className="caesar-control" aria-label="Caesar shift amount">
-            <span>Shift:</span>
-            <input
-              type="range" min={1} max={25} value={shift}
-              onChange={e => setShift(Number(e.target.value))}
-              aria-label="Caesar shift value"
-            />
-            <strong>+{shift}</strong>
-          </div>
-        </div>
-      </div>
-
-      <main>
-        {/* Translator */}
-        <section className="translator-section reveal">
-          <div className="section-inner">
-            <div className="translator translator--death">
+          {/* Translator in hero */}
+          <div className="hero__translator" style={{marginTop:'28px'}}>
+            <div className="translator translator--death" style={{background:'rgba(7,9,15,0.8)',border:'1px solid var(--border-2)',borderRadius:'16px',backdropFilter:'blur(16px)'}}>
               <div className="translator__direction">
                 <span className="lang lang--death">{decryptMode ? 'Cipher Text' : 'Plaintext'}</span>
-                <button
-                  className="translator__swap translator__swap--death"
-                  onClick={() => { setDecryptMode(d => !d); setInput(''); }}
-                  aria-label="Toggle encrypt/decrypt"
-                >
+                <button className="translator__swap translator__swap--death" onClick={() => { setDecryptMode(d => !d); setInput(''); }} aria-label="Toggle encrypt/decrypt">
                   ⇄ {decryptMode ? 'Encrypt Mode' : 'Decrypt Mode'}
                 </button>
                 <span className="lang lang--death">{decryptMode ? 'Decrypted' : 'Encrypted Aurebesh'}</span>
@@ -174,7 +133,7 @@ export default function DeathTrooperPage() {
                     className="pane__textarea"
                     placeholder={decryptMode ? 'Paste cipher text here…' : 'Type your secret message here…'}
                     aria-label="Input"
-                    rows={6}
+                    rows={4}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                   />
@@ -188,13 +147,6 @@ export default function DeathTrooperPage() {
                   <div className="death-output pane__output" aria-label="Encrypted output" aria-live="polite">
                     {aurebeshOutput || <span className="pane__placeholder">Encrypted cipher output appears here…</span>}
                   </div>
-                  <div className="decode-bar">
-                    <span className="decode-bar__label">Show intermediate (letters only)</span>
-                    <span className="cipher-badge">CLASSIFIED</span>
-                    {!decryptMode && encryptedText && (
-                      <span style={{fontSize:'12px',color:'var(--clr-text-3)',fontFamily:'var(--font-mono)',marginLeft:'8px'}}>{encryptedText}</span>
-                    )}
-                  </div>
                   <div className="toolbar">
                     <button className="toolbar__btn toolbar__btn--death" onClick={handleCopy} aria-label="Copy to clipboard">
                       ⎘ {copied ? 'Copied!' : 'Copy'}
@@ -204,7 +156,30 @@ export default function DeathTrooperPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+
+      {/* Cipher Mode Bar */}
+      <div className="cipher-mode-bar">
+        <div className="cipher-mode-bar__inner">
+          <span className="cipher-mode-bar__label">Cipher Mode:</span>
+          <div className="cipher-tabs" role="group" aria-label="Cipher mode selection">
+            {(['both', 'atbash', 'caesar'] as CipherMode[]).map(m => (
+              <button key={m} className={`cipher-tab${mode === m ? ' cipher-tab--active' : ''}`} onClick={() => setMode(m)} aria-pressed={mode === m}>
+                <span className="cipher-tab__name">{m === 'both' ? 'Atbash + Caesar' : m === 'atbash' ? 'Atbash Only' : 'Caesar Only'}</span>
+                <span className="cipher-tab__desc">{m === 'both' ? 'Full Death Trooper cipher' : m === 'atbash' ? 'A↔Z mirror only' : 'Shift only'}</span>
+              </button>
+            ))}
+          </div>
+          <div className="caesar-control" aria-label="Caesar shift amount">
+            <span>Shift:</span>
+            <input type="range" min={1} max={25} value={shift} onChange={e => setShift(Number(e.target.value))} aria-label="Caesar shift value" />
+            <strong>+{shift}</strong>
+          </div>
+        </div>
+      </div>
+
+      <main>
 
         {/* Cipher Steps Diagram */}
         <section className="cipher-explain-section reveal" style={{padding:'0 0 48px'}}>
