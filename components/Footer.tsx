@@ -1,9 +1,17 @@
+'use client'
+
 import Link from 'next/link'
+import PayPalDonateCard from './PayPalDonateCard'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+  if (pathname === '/') return null
+
   return (
     <footer className="border-t mt-16 py-10 px-4" style={{ borderColor: 'var(--border-2)', background: 'var(--bg)' }}>
       <div className="max-w-5xl mx-auto">
+        <PayPalDonateCard id="support" className="mb-8" />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8 text-sm">
           <div>
             <p className="font-bold mb-3" style={{ color: 'var(--text)' }}>Translators</p>
