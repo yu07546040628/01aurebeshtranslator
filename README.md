@@ -1,11 +1,9 @@
 ﻿# 01aurebeshtranslator
 
-A simple translator for Aurebesh text.
+A simple Aurebesh translator project.
 
-## Visit My New Website
+## Live Website
 
-I am also building an HSK practice platform for global learners:
+Use the translator online here:
 
-- https://hskdrill.com
-
-If you are preparing for HSK exams, welcome to check it out.
+- https://www.freeaurebesh.com
