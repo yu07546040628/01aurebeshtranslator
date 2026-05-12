@@ -64,6 +64,7 @@ function Starfield() {
 
 /* ── Main page ── */
 export default function Home() {
+  const paypalEnabled = process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE === 'true';
   const [input, setInput] = useState('');
   const [dir, setDir] = useState<'eng2aur' | 'aur2eng'>('eng2aur');
   const [copied, setCopied] = useState(false);
@@ -451,7 +452,7 @@ export default function Home() {
             <Link href="/font-download">Font Download</Link>
             <Link href="/about">About</Link>
           </nav>
-          <PayPalDonateCard id="support-home" />
+          {paypalEnabled && <PayPalDonateCard id="support-home" />}
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
           <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',justifyContent:'center',marginTop:'12px'}}>

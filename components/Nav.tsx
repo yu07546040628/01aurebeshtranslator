@@ -40,6 +40,7 @@ export default function Nav() {
   };
 
   const isActive = (href: string) => pathname === href;
+  const paypalEnabled = process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE === 'true';
   const hasDonateConfig =
     !!process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID || !!process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS;
   const donateHref = process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID
@@ -68,17 +69,19 @@ export default function Nav() {
           <li><Link href="/font-download" className={`nav__link${isActive('/font-download') ? ' nav__link--active' : ''}`}>Font Download</Link></li>
           <li><Link href="/blog"          className={`nav__link${isActive('/blog') ? ' nav__link--active' : ''}`}>Blog</Link></li>
           <li><Link href="/about"        className={`nav__link${isActive('/about') ? ' nav__link--active' : ''}`}>About</Link></li>
-          <li>
-            <a
-              href={donateHref}
-              className="nav__link nav__link--donate"
-              target={hasDonateConfig ? '_blank' : undefined}
-              rel={hasDonateConfig ? 'noopener noreferrer' : undefined}
-              onClick={() => setMenuOpen(false)}
-            >
-              Donate
-            </a>
-          </li>
+          {paypalEnabled && (
+            <li>
+              <a
+                href={donateHref}
+                className="nav__link nav__link--donate"
+                target={hasDonateConfig ? '_blank' : undefined}
+                rel={hasDonateConfig ? 'noopener noreferrer' : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                Donate
+              </a>
+            </li>
+          )}
         </ul>
 
         {/* 亮暗切换按钮 */}
