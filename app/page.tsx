@@ -6,6 +6,7 @@ import Nav from '../components/Nav';
 import Comments from '../components/Comments';
 import PayPalDonateCard from '@/components/PayPalDonateCard';
 import { tokeniseEnglish, ENG_TO_AUR, aurToEng, DIPTHONGS } from '@/lib/aurebesh';
+import { getDonateConfig } from '@/lib/donate';
 
 /* ── Aurebesh letter names ── */
 const LETTER_NAMES: Record<string, string> = {
@@ -64,7 +65,7 @@ function Starfield() {
 
 /* ── Main page ── */
 export default function Home() {
-  const paypalEnabled = process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE === 'true';
+  const donate = getDonateConfig();
   const [input, setInput] = useState('');
   const [dir, setDir] = useState<'eng2aur' | 'aur2eng'>('eng2aur');
   const [copied, setCopied] = useState(false);
@@ -451,8 +452,11 @@ export default function Home() {
             <Link href="/alphabet">Alphabet Chart</Link>
             <Link href="/font-download">Font Download</Link>
             <Link href="/about">About</Link>
+            <Link href="/support">Support</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
           </nav>
-          {paypalEnabled && <PayPalDonateCard id="support-home" />}
+          {donate.enabled && <PayPalDonateCard id="support-home" />}
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
           <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',justifyContent:'center',marginTop:'12px'}}>

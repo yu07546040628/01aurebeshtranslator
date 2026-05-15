@@ -3,16 +3,17 @@
 import Link from 'next/link'
 import PayPalDonateCard from './PayPalDonateCard'
 import { usePathname } from 'next/navigation'
+import { getDonateConfig } from '@/lib/donate'
 
 export default function Footer() {
   const pathname = usePathname()
-  const paypalEnabled = process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE === 'true'
+  const donate = getDonateConfig()
   if (pathname === '/') return null
 
   return (
     <footer className="border-t mt-16 py-10 px-4" style={{ borderColor: 'var(--border-2)', background: 'var(--bg)' }}>
       <div className="max-w-5xl mx-auto">
-        {paypalEnabled && <PayPalDonateCard id="support" className="mb-8" />}
+        {donate.enabled && <PayPalDonateCard id="support" className="mb-8" />}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8 text-sm">
           <div>
             <p className="font-bold mb-3" style={{ color: 'var(--text)' }}>Translators</p>
@@ -37,7 +38,9 @@ export default function Footer() {
             <ul className="space-y-2" style={{ color: 'var(--text-3)' }}>
               <li><Link href="/about" className="hover:opacity-80">About</Link></li>
               <li><Link href="/contact" className="hover:opacity-80">Contact</Link></li>
+              <li><Link href="/support" className="hover:opacity-80">Support</Link></li>
               <li><Link href="/privacy-policy" className="hover:opacity-80">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:opacity-80">Terms of Service</Link></li>
             </ul>
           </div>
           <div>
@@ -48,8 +51,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-2 text-xs" style={{ borderColor: 'var(--border-2)', color: 'var(--text-3)' }}>
-          <p>© {new Date().getFullYear()} freeaurebesh.com — Fan-made Star Wars language tools. Not affiliated with Lucasfilm or Disney.</p>
-          <Link href="/privacy-policy" className="hover:opacity-80">Privacy Policy</Link>
+          <p>{new Date().getFullYear()} freeaurebesh.com - Fan-made Star Wars language tools. Not affiliated with Lucasfilm or Disney.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:opacity-80">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:opacity-80">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

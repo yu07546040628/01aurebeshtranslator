@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { getDonateConfig } from '@/lib/donate';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -40,14 +41,7 @@ export default function Nav() {
   };
 
   const isActive = (href: string) => pathname === href;
-  const paypalEnabled = process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE === 'true';
-  const hasDonateConfig =
-    !!process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID || !!process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS;
-  const donateHref = process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID
-    ? `https://www.paypal.com/donate/?hosted_button_id=${encodeURIComponent(process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID)}`
-    : process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS
-      ? `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=${encodeURIComponent(process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS)}&currency_code=USD`
-      : '#support';
+  const donate = getDonateConfig();
 
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`} id="nav">
@@ -69,16 +63,16 @@ export default function Nav() {
           <li><Link href="/font-download" className={`nav__link${isActive('/font-download') ? ' nav__link--active' : ''}`}>Font Download</Link></li>
           <li><Link href="/blog"          className={`nav__link${isActive('/blog') ? ' nav__link--active' : ''}`}>Blog</Link></li>
           <li><Link href="/about"        className={`nav__link${isActive('/about') ? ' nav__link--active' : ''}`}>About</Link></li>
-          {paypalEnabled && (
+          {donate.enabled && (
             <li>
               <a
-                href={donateHref}
+                href={donate.href}
                 className="nav__link nav__link--donate"
-                target={hasDonateConfig ? '_blank' : undefined}
-                rel={hasDonateConfig ? 'noopener noreferrer' : undefined}
+                target={donate.opensInNewTab ? '_blank' : undefined}
+                rel={donate.opensInNewTab ? 'noopener noreferrer' : undefined}
                 onClick={() => setMenuOpen(false)}
               >
-                Donate
+                {donate.provider === 'none' ? 'Support' : `Donate with ${donate.providerLabel}`}
               </a>
             </li>
           )}

@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-3xl mx-auto">
         <header className="mb-10">
           <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--gold)' }}>Privacy Policy</h1>
-          <p className="text-sm" style={{ color: 'var(--text-3)' }}>Last updated: April 2025</p>
+          <p className="text-sm" style={{ color: 'var(--text-3)' }}>Last updated: May 13, 2026</p>
         </header>
 
         <div className="space-y-8 text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>

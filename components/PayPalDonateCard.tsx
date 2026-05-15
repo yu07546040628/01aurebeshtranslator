@@ -1,100 +1,21 @@
 'use client';
 
-import { useEffect, useId, useMemo, useRef } from 'react';
+import { getDonateConfig } from '@/lib/donate';
 
 declare global {
   interface Window {
-    PayPal?: {
-      Donation?: {
-        Button: (config: {
-          env?: 'production' | 'sandbox';
-          hosted_button_id?: string;
-          business?: string;
-          image: { src: string; alt: string; title: string };
-          onComplete?: (params: Record<string, string>) => void;
-        }) => { render: (selector: string) => void };
-      };
-    };
     gtag?: (...args: unknown[]) => void;
   }
 }
 
-type PayPalDonateCardProps = {
+type DonateCardProps = {
   id?: string;
   className?: string;
 };
 
-export default function PayPalDonateCard({ id, className }: PayPalDonateCardProps) {
-  const hostedButtonId = (process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID || '').trim();
-  const business = (process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS || '').trim();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const containerId = useId().replace(/:/g, '');
-
-  const donateHref = useMemo(() => {
-    if (hostedButtonId) {
-      return `https://www.paypal.com/donate/?hosted_button_id=${encodeURIComponent(hostedButtonId)}`;
-    }
-    if (business) {
-      return `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=${encodeURIComponent(business)}&currency_code=USD`;
-    }
-    return 'https://www.paypal.com/donate/buttons';
-  }, [business, hostedButtonId]);
-
-  useEffect(() => {
-    if (!hostedButtonId && !business) return;
-
-    let cancelled = false;
-
-    const renderButton = () => {
-      if (cancelled) return;
-      if (!window.PayPal?.Donation?.Button || !containerRef.current) return;
-
-      containerRef.current.innerHTML = '';
-      window.PayPal.Donation.Button({
-        env: 'production',
-        hosted_button_id: hostedButtonId || undefined,
-        business: hostedButtonId ? undefined : business || undefined,
-        image: {
-          src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-          title: 'PayPal - The safer, easier way to pay online!',
-          alt: 'Donate with PayPal button',
-        },
-        onComplete: (params) => {
-          window.gtag?.('event', 'paypal_donation_complete', {
-            value: params.amt || '',
-            currency: params.cc || '',
-            transaction_id: params.tx || '',
-          });
-        },
-      }).render(`#${containerId}`);
-    };
-
-    const existing = document.querySelector<HTMLScriptElement>('script[data-paypal-donate-sdk="true"]');
-    if (existing) {
-      if (window.PayPal?.Donation?.Button) {
-        renderButton();
-      } else {
-        existing.addEventListener('load', renderButton, { once: true });
-      }
-      return () => {
-        cancelled = true;
-        existing.removeEventListener('load', renderButton);
-      };
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://www.paypalobjects.com/donate/sdk/donate-sdk.js';
-    script.charset = 'UTF-8';
-    script.async = true;
-    script.dataset.paypalDonateSdk = 'true';
-    script.addEventListener('load', renderButton, { once: true });
-    document.head.appendChild(script);
-
-    return () => {
-      cancelled = true;
-      script.removeEventListener('load', renderButton);
-    };
-  }, [business, containerId, hostedButtonId]);
+export default function PayPalDonateCard({ id, className }: DonateCardProps) {
+  const donate = getDonateConfig();
+  if (!donate.enabled) return null;
 
   return (
     <section id={id} className={`donate-card${className ? ` ${className}` : ''}`} aria-label="Support this project">
@@ -108,29 +29,31 @@ export default function PayPalDonateCard({ id, className }: PayPalDonateCardProp
         <span className="donate-card__badge">Support This Project</span>
         <h3 className="donate-card__title">Keep These Star Wars Tools Free</h3>
         <p className="donate-card__desc">
-          If this translator helped your tattoos, props, or fan art, a small PayPal donation helps keep it online.
+          If this translator helped your tattoos, props, or fan art, a small donation helps keep it online.
         </p>
       </div>
 
       <div className="donate-card__actions">
-        <div ref={containerRef} id={containerId} className="donate-card__paypal" />
         <a
-          href={donateHref}
+          href={donate.href}
           target="_blank"
           rel="noopener noreferrer"
           className="donate-card__link"
           onClick={() => {
-            window.gtag?.('event', 'paypal_donate_click', { placement: id || 'footer' });
+            window.gtag?.('event', 'donate_click', { placement: id || 'footer', provider: donate.provider });
           }}
         >
-          Open PayPal Donation Page
+          {`Donate with ${donate.providerLabel}`}
         </a>
       </div>
 
-      {!hostedButtonId && !business ? (
+      {donate.provider === 'creem' ? (
         <p className="donate-card__hint">
-          Set <code>NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID</code> (or <code>NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS</code>) to
-          render the live button.
+          Secure checkout is handled by Creem.
+        </p>
+      ) : donate.provider === 'paypal' ? (
+        <p className="donate-card__hint">
+          Secure checkout is handled by PayPal.
         </p>
       ) : null}
     </section>
