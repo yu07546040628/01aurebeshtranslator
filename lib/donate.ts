@@ -22,11 +22,7 @@ export function getDonateConfig(): DonateConfig {
   const provider: DonateProvider = creemDonateUrl ? 'creem' : paypalHref ? 'paypal' : 'none';
   const href = provider === 'creem' ? creemDonateUrl : provider === 'paypal' ? paypalHref : '/support';
 
-  const explicitEnable = (process.env.NEXT_PUBLIC_ENABLE_DONATE || '').toLowerCase();
-  const legacyEnable = (process.env.NEXT_PUBLIC_ENABLE_PAYPAL_DONATE || '').toLowerCase();
-  const enabledByFlag =
-    explicitEnable ? explicitEnable === 'true' : legacyEnable ? legacyEnable === 'true' : true;
-  const enabled = enabledByFlag;
+  const enabled = false;
 
   return {
     enabled,
