@@ -419,6 +419,16 @@ img { max-width: 100%; height: auto; display: block; }
   border-color: rgba(201,168,76,0.6);
   background: rgba(201,168,76,0.16);
 }
+.nav__link--shop {
+  color: #4ade80;
+  border: 1px solid rgba(74,222,128,0.35);
+  background: rgba(74,222,128,0.08);
+}
+.nav__link--shop:hover {
+  color: #86efac;
+  border-color: rgba(74,222,128,0.6);
+  background: rgba(74,222,128,0.16);
+}
 
 .nav__menu-btn {
   display: none;

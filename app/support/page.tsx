@@ -30,7 +30,10 @@ export default function SupportPage() {
               <div className="mb-4">
                 <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--text-3)' }}>Basic Pack</p>
                 <h2 className="text-2xl font-bold mb-1" style={{ color: 'var(--text)' }}>Aurebesh SVG Pack</h2>
-                <p className="text-3xl font-bold" style={{ color: 'var(--gold)' }}>$3.99</p>
+                <div className="flex items-baseline gap-2">
+                <span className="text-lg line-through" style={{ color: 'var(--text-3)' }}>$3.99</span>
+                <span className="text-3xl font-bold" style={{ color: 'var(--gold)' }}>$1.99</span>
+              </div>
               </div>
               <ul className="text-sm space-y-1 mb-6 flex-1" style={{ color: 'var(--text-2)' }}>
                 <li>✓ 26 Aurebesh letter SVGs</li>
@@ -42,7 +45,7 @@ export default function SupportPage() {
                 <a href={BASIC_URL} target="_blank" rel="noopener noreferrer"
                   className="block text-center py-3 rounded-lg font-semibold"
                   style={{ background: 'var(--gold)', color: '#111' }}>
-                  Buy Basic Pack — $3.99
+                  Buy Basic Pack — $1.99
                 </a>
               ) : (
                 <p className="text-xs text-center" style={{ color: 'var(--text-3)' }}>Coming soon</p>
@@ -54,7 +57,10 @@ export default function SupportPage() {
               <div className="mb-4">
                 <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--gold)' }}>Full Pack</p>
                 <h2 className="text-2xl font-bold mb-1" style={{ color: 'var(--text)' }}>All Languages SVG Pack</h2>
-                <p className="text-3xl font-bold" style={{ color: 'var(--gold)' }}>$7.99</p>
+                <div className="flex items-baseline gap-2">
+                <span className="text-lg line-through" style={{ color: 'var(--text-3)' }}>$7.99</span>
+                <span className="text-3xl font-bold" style={{ color: 'var(--gold)' }}>$2.00</span>
+              </div>
               </div>
               <ul className="text-sm space-y-1 mb-6 flex-1" style={{ color: 'var(--text-2)' }}>
                 <li>✓ Everything in Basic Pack</li>
@@ -67,7 +73,7 @@ export default function SupportPage() {
                 <a href={FULL_URL} target="_blank" rel="noopener noreferrer"
                   className="block text-center py-3 rounded-lg font-semibold"
                   style={{ background: 'var(--gold)', color: '#111' }}>
-                  Buy Full Pack — $7.99
+                  Buy Full Pack — $2.00
                 </a>
               ) : (
                 <p className="text-xs text-center" style={{ color: 'var(--text-3)' }}>Coming soon</p>

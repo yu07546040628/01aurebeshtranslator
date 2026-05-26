@@ -63,6 +63,17 @@ export default function Nav() {
           <li><Link href="/font-download" className={`nav__link${isActive('/font-download') ? ' nav__link--active' : ''}`}>Font Download</Link></li>
           <li><Link href="/blog"          className={`nav__link${isActive('/blog') ? ' nav__link--active' : ''}`}>Blog</Link></li>
           <li><Link href="/about"        className={`nav__link${isActive('/about') ? ' nav__link--active' : ''}`}>About</Link></li>
+          <li style={{ position: 'relative' }}>
+            <Link href="/support" className={`nav__link nav__link--shop${isActive('/support') ? ' nav__link--active' : ''}`}>
+              SVG Packs
+              <span style={{
+                position: 'absolute', top: '-6px', right: '-8px',
+                background: '#f43f5e', color: '#fff',
+                fontSize: '9px', fontWeight: 700, lineHeight: 1,
+                padding: '2px 4px', borderRadius: '4px', letterSpacing: '0.5px',
+              }}>NEW</span>
+            </Link>
+          </li>
           {donate.enabled && (
             <li>
               <a
