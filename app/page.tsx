@@ -4,9 +4,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Comments from '../components/Comments';
-import PayPalDonateCard from '@/components/PayPalDonateCard';
 import { tokeniseEnglish, ENG_TO_AUR, aurToEng, DIPTHONGS } from '@/lib/aurebesh';
-import { getDonateConfig } from '@/lib/donate';
 
 /* ── Aurebesh letter names ── */
 const LETTER_NAMES: Record<string, string> = {
@@ -65,7 +63,6 @@ function Starfield() {
 
 /* ── Main page ── */
 export default function Home() {
-  const donate = getDonateConfig();
   const [input, setInput] = useState('');
   const [dir, setDir] = useState<'eng2aur' | 'aur2eng'>('eng2aur');
   const [copied, setCopied] = useState(false);
@@ -456,9 +453,8 @@ export default function Home() {
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-of-service">Terms of Service</Link>
           </nav>
-          {donate.enabled && <PayPalDonateCard id="support-home" />}
           <p className="footer__note">Fan project. Star Wars and Aurebesh are trademarks of Lucasfilm Ltd. / Disney. Not affiliated with or endorsed by Disney.</p>
-          <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:yu07546040628@gmail.com" style={{color:'var(--gold)'}}>yu07546040628@gmail.com</a></p>
+          <p className="footer__note" style={{marginTop:'4px'}}>Contact: <a href="mailto:support@freeaurebesh.com" style={{color:'var(--gold)'}}>support@freeaurebesh.com</a></p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',justifyContent:'center',marginTop:'12px'}}>
             <a href="https://newtool.site/item/free-aurebesh-translator" target="_blank" rel="noopener noreferrer">
               <img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="40" width="auto" />

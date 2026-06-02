@@ -96,8 +96,8 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold mb-3" style={{ color: 'var(--text)' }}>Contact</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>
               Questions, suggestions, or just want to share your Aurebesh tattoo? Reach out at{' '}
-              <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>
-                yu07546040628@gmail.com
+              <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>
+                support@freeaurebesh.com
               </a>
             </p>
           </section>

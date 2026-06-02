@@ -51,6 +51,7 @@ export default function PrivacyPolicyPage() {
             <ul className="space-y-1 list-disc list-inside">
               <li>Google Analytics — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)' }}>Privacy Policy</a></li>
               <li>Google AdSense — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)' }}>Privacy Policy</a></li>
+              <li>Creem - payment processing for digital purchases; we do not store full card details on this website.</li>
             </ul>
           </section>
 
@@ -61,7 +62,7 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>Contact</h2>
-            <p>Questions about this policy? Email us at <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>yu07546040628@gmail.com</a></p>
+            <p>Questions about this policy? Email us at <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>support@freeaurebesh.com</a></p>
           </section>
 
         </div>

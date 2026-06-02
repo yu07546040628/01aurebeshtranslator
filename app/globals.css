@@ -1163,15 +1163,6 @@ html.light .hero__translator .tx {
   align-items: center;
   justify-content: center;
 }
-.donate-card__paypal {
-  min-height: 44px;
-}
-.donate-card__paypal form {
-  margin: 0;
-}
-.donate-card__paypal img {
-  min-height: 44px;
-}
 .donate-card__link {
   display: inline-flex;
   align-items: center;

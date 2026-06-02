@@ -30,11 +30,11 @@ export default function ContactPage() {
               The best way to reach us. We typically respond within 48 hours.
             </p>
             <a
-              href="mailto:yu07546040628@gmail.com"
+              href="mailto:support@freeaurebesh.com"
               className="inline-block px-6 py-3 rounded-lg font-bold transition-opacity hover:opacity-80"
               style={{ background: 'var(--gold)', color: '#000' }}
             >
-              yu07546040628@gmail.com
+              support@freeaurebesh.com
             </a>
           </div>
 

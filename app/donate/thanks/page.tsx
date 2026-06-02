@@ -4,7 +4,7 @@ import Nav from '@/components/Nav'
 
 export const metadata: Metadata = {
   title: 'Thank You for Your Support - Aurebesh Translator',
-  description: 'Thank you for supporting Free Aurebesh Translator. Your donation helps keep this fan-made project online and maintained.',
+  description: 'Thank you for supporting Free Aurebesh Translator. Your support helps keep this fan-made project online and maintained.',
   alternates: {
     canonical: 'https://www.freeaurebesh.com/donate/thanks',
   },
@@ -27,7 +27,7 @@ export default function DonateThanksPage() {
               className="text-xs font-bold tracking-widest uppercase mb-4"
               style={{ color: 'var(--text-3)' }}
             >
-              Donation Complete
+              Support Complete
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: 'var(--gold)' }}>
               Thank You
@@ -61,8 +61,8 @@ export default function DonateThanksPage() {
           >
             <p style={{ color: 'var(--text-2)' }}>
               Need help or have feedback? Contact us at{' '}
-              <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>
-                yu07546040628@gmail.com
+              <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>
+                support@freeaurebesh.com
               </a>
               .
             </p>

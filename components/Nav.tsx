@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { getDonateConfig } from '@/lib/donate';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -41,7 +40,6 @@ export default function Nav() {
   };
 
   const isActive = (href: string) => pathname === href;
-  const donate = getDonateConfig();
 
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`} id="nav">
@@ -74,19 +72,6 @@ export default function Nav() {
               }}>NEW</span>
             </Link>
           </li>
-          {donate.enabled && (
-            <li>
-              <a
-                href={donate.href}
-                className="nav__link nav__link--donate"
-                target={donate.opensInNewTab ? '_blank' : undefined}
-                rel={donate.opensInNewTab ? 'noopener noreferrer' : undefined}
-                onClick={() => setMenuOpen(false)}
-              >
-                {donate.provider === 'none' ? 'Support' : `Donate with ${donate.providerLabel}`}
-              </a>
-            </li>
-          )}
         </ul>
 
         {/* 亮暗切换按钮 */}

@@ -5,7 +5,7 @@ import Nav from '@/components/Nav'
 export const metadata: Metadata = {
   title: 'SVG Asset Packs - Aurebesh Translator',
   description:
-    'Download Star Wars language SVG asset packs. Aurebesh, Sith, and Death Trooper alphabet SVG files for design projects.',
+    'Purchase digital SVG asset packs for Aurebesh, Sith, and Death Trooper. Files are delivered instantly after checkout for design projects.',
   alternates: { canonical: 'https://www.freeaurebesh.com/support' },
 }
 
@@ -27,7 +27,7 @@ export default function SupportPage() {
               SVG Asset Packs
             </h1>
             <p style={{ color: 'var(--text-2)' }}>
-              Ready-to-use Star Wars alphabet SVG files for Canva, Figma, Illustrator, and web projects.
+              Ready-to-use digital SVG files for Canva, Figma, Illustrator, and web projects.
             </p>
           </header>
 
@@ -60,7 +60,7 @@ export default function SupportPage() {
                 <li>26 Aurebesh letter SVGs</li>
                 <li>12 dipthong SVGs, including CH, EE, and TH</li>
                 <li>200 x 200px files with dark backgrounds</li>
-                <li>Personal and commercial use</li>
+                <li>Personal and commercial use subject to the pack license included with your files</li>
               </ul>
 
               <a
@@ -106,7 +106,7 @@ export default function SupportPage() {
                 <li>26 Sith alphabet SVGs</li>
                 <li>26 Death Trooper cipher SVGs</li>
                 <li>114 files total</li>
-                <li>Personal and commercial use</li>
+                <li>Personal and commercial use subject to the pack license included with your files</li>
               </ul>
 
               <a
@@ -123,6 +123,27 @@ export default function SupportPage() {
               </p>
             </div>
           </div>
+
+          <section
+            className="rounded-xl p-5 border mb-8 text-sm space-y-2"
+            style={{ borderColor: 'var(--border-2)', background: 'var(--panel)', color: 'var(--text-2)' }}
+          >
+            <h2 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
+              Delivery and Refunds
+            </h2>
+            <p>
+              These are digital products delivered electronically after checkout. If you do not receive your files or
+              something is not as described, contact us at{' '}
+              <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>
+                support@freeaurebesh.com
+              </a>
+              .
+            </p>
+            <p>
+              Digital purchases are generally final once delivered, unless a refund is required by law or the item
+              cannot be delivered as described.
+            </p>
+          </section>
 
           <section className="space-y-2 text-sm text-center" style={{ color: 'var(--text-3)' }}>
             <p>

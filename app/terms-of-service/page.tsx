@@ -15,7 +15,7 @@ export default function TermsOfServicePage() {
         <div className="max-w-3xl mx-auto">
           <header className="mb-10">
             <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--gold)' }}>Terms of Service</h1>
-            <p className="text-sm" style={{ color: 'var(--text-3)' }}>Last updated: May 13, 2026</p>
+            <p className="text-sm" style={{ color: 'var(--text-3)' }}>Last updated: June 2, 2026</p>
           </header>
 
           <div className="space-y-8 text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>
@@ -26,13 +26,15 @@ export default function TermsOfServicePage() {
 
             <section>
               <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>2. Service Description</h2>
-              <p>freeaurebesh.com provides free, fan-made Star Wars language tools including Aurebesh, Sith, Huttese, Droidspeak, and Death Trooper text conversion features.</p>
+              <p>freeaurebesh.com provides free, fan-made Star Wars language tools and sells digital SVG asset packs for design use.</p>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>3. Donations</h2>
-              <p>Donations are optional and support hosting and maintenance of this free project. Donations are processed by third-party payment providers (such as Creem or PayPal), not directly by us.</p>
-              <p className="mt-2">Because donations are voluntary support payments and not purchases of digital goods or subscriptions, they are generally non-refundable unless required by law.</p>
+              <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>3. Digital Purchases</h2>
+              <p>Digital asset packs are sold through Creem, our third-party payment provider, not directly by us.</p>
+              <p className="mt-2">After checkout, files are delivered electronically through the payment provider or download flow shown at purchase.</p>
+              <p className="mt-2">Because digital asset packs are delivered electronically, all sales are final unless a refund is required by law or the item cannot be delivered as described.</p>
+              <p className="mt-2">If you have a delivery issue or believe a purchase was made in error, contact us at <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>support@freeaurebesh.com</a>.</p>
             </section>
 
             <section>
@@ -62,7 +64,7 @@ export default function TermsOfServicePage() {
 
             <section>
               <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>9. Contact</h2>
-              <p>Questions about these terms can be sent to <a href="mailto:yu07546040628@gmail.com" style={{ color: 'var(--gold)' }}>yu07546040628@gmail.com</a>.</p>
+              <p>Questions about these terms can be sent to <a href="mailto:support@freeaurebesh.com" style={{ color: 'var(--gold)' }}>support@freeaurebesh.com</a>.</p>
             </section>
           </div>
         </div>

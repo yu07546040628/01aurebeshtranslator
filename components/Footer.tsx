@@ -1,19 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import PayPalDonateCard from './PayPalDonateCard'
 import { usePathname } from 'next/navigation'
-import { getDonateConfig } from '@/lib/donate'
 
 export default function Footer() {
   const pathname = usePathname()
-  const donate = getDonateConfig()
   if (pathname === '/') return null
 
   return (
     <footer className="border-t mt-16 py-10 px-4" style={{ borderColor: 'var(--border-2)', background: 'var(--bg)' }}>
       <div className="max-w-5xl mx-auto">
-        {donate.enabled && <PayPalDonateCard id="support" className="mb-8" />}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8 text-sm">
           <div>
             <p className="font-bold mb-3" style={{ color: 'var(--text)' }}>Translators</p>
@@ -45,8 +41,8 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-bold mb-3" style={{ color: 'var(--text)' }}>Contact</p>
-            <a href="mailto:yu07546040628@gmail.com" className="text-sm hover:opacity-80" style={{ color: 'var(--text-3)' }}>
-              yu07546040628@gmail.com
+            <a href="mailto:support@freeaurebesh.com" className="text-sm hover:opacity-80" style={{ color: 'var(--text-3)' }}>
+              support@freeaurebesh.com
             </a>
           </div>
         </div>
